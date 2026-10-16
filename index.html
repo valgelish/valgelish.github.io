@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Val Gelish · Be Beauty</title>
+  <meta name="description" content="Uñas de gelish, ojo de gato, francés y más. Elige tu servicio y tus colores y agenda tu cita por WhatsApp.">
+  <meta name="theme-color" content="#F6EFE9">
+  <meta property="og:title" content="Val Gelish · Be Beauty">
+  <meta property="og:description" content="Elige tu servicio y tus colores y agenda tu cita por WhatsApp.">
+  <meta property="og:image" content="assets/ig/p01.jpg">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#inicio" class="nav__logo" aria-label="Val Gelish, inicio">
+      <span class="wm"><span class="wm__s">val<svg class="wm__h" viewBox="0 0 24 22" aria-hidden="true"><path d="M12 20.5S2.5 14.6 2.5 7.9A4.9 4.9 0 0 1 12 5.6a4.9 4.9 0 0 1 9.5 2.3c0 6.7-9.5 12.6-9.5 12.6Z"/></svg>gelish</span><span class="wm__t">be beauty</span></span>
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#colores">Colores</a>
+      <a href="#galeria">Galería</a>
+      <a href="#cita" class="btn btn--small">Agendar</a>
+    </nav>
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero__media">
+      <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto">
+        <source src="assets/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero__fallback" aria-hidden="true">
+        <img src="assets/ig/p01.jpg" alt="">
+        <img src="assets/ig/p03.jpg" alt="">
+        <img src="assets/ig/p09.jpg" alt="">
+      </div>
+      <div class="hero__veil"></div>
+    </div>
+    <div class="hero__content">
+      <p class="script hero__kicker">be beauty</p>
+      <h1 class="hero__title">Uñas que <em>hablan</em><br>de ti.</h1>
+      <p class="hero__sub">Gelish, ojo de gato y francés hechos con calma, detalle y mucho cariño. Elige tu servicio, tus colores y agenda en un minuto.</p>
+      <div class="hero__ctas">
+        <a href="#cita" class="btn">Arma tu cita</a>
+        <a href="#colores" class="btn btn--ghost">Ver colores</a>
+      </div>
+    </div>
+    <a href="#servicios" class="hero__scroll" aria-label="Bajar">desliza</a>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Gelish</span><i>♡</i><span>Ojo de gato</span><i>♡</i><span>Francés</span><i>♡</i><span>Base rubber</span><i>♡</i><span>Efecto glaseado</span><i>♡</i>
+      <span>Gelish</span><i>♡</i><span>Ojo de gato</span><i>♡</i><span>Francés</span><i>♡</i><span>Base rubber</span><i>♡</i><span>Efecto glaseado</span><i>♡</i>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios">
+    <div class="section__head">
+      <p class="eyebrow">01 — Servicios</p>
+      <h2>Elige tu <em>mani</em></h2>
+      <p class="section__lead">Toca un servicio para agregarlo a tu cita. Puedes combinar uno base con los extras que quieras.</p>
+    </div>
+    <div class="services">
+      <div class="services__group">
+        <h3 class="services__label">Servicios</h3>
+        <ul class="services__list" id="serviciosBase"></ul>
+      </div>
+      <div class="services__group">
+        <h3 class="services__label">Extras</h3>
+        <ul class="services__list" id="serviciosExtra"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLORES -->
+  <section class="section section--tint" id="colores">
+    <div class="section__head">
+      <p class="eyebrow">02 — Colores</p>
+      <h2>Tu tono <em>favorito</em></h2>
+      <p class="section__lead">Elige hasta <span id="maxColoresTxt">3</span> colores que te gusten. Los esmaltes cambian seguido, así que esto es lo que hay disponible hoy.</p>
+    </div>
+    <div class="chips" id="filtros" role="tablist" aria-label="Filtrar colores"></div>
+    <div class="swatches" id="swatches" aria-live="polite">
+      <p class="swatches__loading">Cargando colores…</p>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="section" id="galeria">
+    <div class="section__head section__head--row">
+      <div>
+        <p class="eyebrow">03 — Galería</p>
+        <h2>Hecho por <em>Val</em></h2>
+      </div>
+      <a class="link-ig" id="igLink" href="#" target="_blank" rel="noopener">@valgelish →</a>
+    </div>
+    <div class="gallery">
+      <figure class="g g--tall"><img src="assets/ig/p01.jpg" alt="Francés con base nude" loading="lazy"></figure>
+      <figure class="g"><img src="assets/ig/p03.jpg" alt="Gelish vino tinto" loading="lazy"></figure>
+      <figure class="g"><img src="assets/ig/p08.jpg" alt="Diseño verde olivo con puntos" loading="lazy"></figure>
+      <figure class="g g--wide"><img src="assets/ig/p05.jpg" alt="Gelish rojo cereza" loading="lazy"></figure>
+      <figure class="g"><img src="assets/ig/p09.jpg" alt="Gelish chocolate" loading="lazy"></figure>
+      <figure class="g g--tall"><img src="assets/ig/p11.jpg" alt="Gelish mocha" loading="lazy"></figure>
+      <figure class="g"><img src="assets/ig/p07.jpg" alt="Gelish rojo" loading="lazy"></figure>
+      <figure class="g"><img src="assets/ig/p02.jpg" alt="Gelish nude rosado" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- CITA -->
+  <section class="section section--tint" id="cita">
+    <div class="section__head">
+      <p class="eyebrow">04 — Agenda</p>
+      <h2>Arma tu <em>cita</em></h2>
+      <p class="section__lead">Revisa tu selección, dinos cuándo te queda y te mandamos directo a WhatsApp con todo escrito.</p>
+    </div>
+
+    <div class="booking">
+      <form class="booking__form" id="bookingForm" novalidate>
+        <label class="field">
+          <span>Tu nombre</span>
+          <input type="text" id="fNombre" autocomplete="given-name" placeholder="¿Cómo te llamas?">
+        </label>
+        <div class="field-row">
+          <label class="field">
+            <span>Día preferido</span>
+            <input type="date" id="fFecha">
+          </label>
+          <div class="field">
+            <span>Horario</span>
+            <div class="seg" id="fHorario" role="radiogroup" aria-label="Horario">
+              <button type="button" role="radio" aria-checked="false" data-v="Mañana">Mañana</button>
+              <button type="button" role="radio" aria-checked="false" data-v="Tarde">Tarde</button>
+              <button type="button" role="radio" aria-checked="false" data-v="Noche">Noche</button>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <span>Largo de uña</span>
+          <div class="seg" id="fLargo" role="radiogroup" aria-label="Largo de uña">
+            <button type="button" role="radio" aria-checked="false" data-v="Corta">Corta</button>
+            <button type="button" role="radio" aria-checked="false" data-v="Media">Media</button>
+            <button type="button" role="radio" aria-checked="false" data-v="Larga">Larga</button>
+          </div>
+        </div>
+        <label class="field">
+          <span>¿Algo más? <small>(opcional)</small></span>
+          <textarea id="fNotas" rows="3" placeholder="Diseño que viste, forma de uña, si traes gelish de otro lado…"></textarea>
+        </label>
+      </form>
+
+      <aside class="ticket" aria-label="Resumen de tu cita">
+        <p class="script ticket__hello">tu cita</p>
+        <div class="ticket__block">
+          <h4>Servicios</h4>
+          <ul id="tServicios"><li class="muted">Aún no eliges servicio</li></ul>
+        </div>
+        <div class="ticket__block">
+          <h4>Colores</h4>
+          <div id="tColores" class="ticket__colors"><span class="muted">Aún no eliges color</span></div>
+        </div>
+        <div class="ticket__total">
+          <span>Total estimado</span>
+          <strong id="tTotal">$0</strong>
+        </div>
+        <button type="button" class="btn btn--wa" id="btnWhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.88 9.88 0 0 0 12.04 2Zm5.8 14.03c-.24.68-1.42 1.31-1.96 1.36-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.66-.17 1.33Z"/></svg>
+          Enviar por WhatsApp
+        </button>
+        <p class="ticket__note">Se abrirá WhatsApp con tu mensaje listo. Val te confirma disponibilidad.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span class="wm wm--lg"><span class="wm__s">val<svg class="wm__h" viewBox="0 0 24 22" aria-hidden="true"><path d="M12 20.5S2.5 14.6 2.5 7.9A4.9 4.9 0 0 1 12 5.6a4.9 4.9 0 0 1 9.5 2.3c0 6.7-9.5 12.6-9.5 12.6Z"/></svg>gelish</span><span class="wm__t">be beauty</span></span>
+    <p class="script footer__tag">el amor propio también se lleva en las manos</p>
+    <div class="footer__links">
+      <a id="footIg" href="#" target="_blank" rel="noopener">Instagram</a>
+      <a id="footWa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> Val Gelish · Be Beauty</p>
+  </footer>
+
+  <!-- Barra flotante (móvil) -->
+  <div class="dock" id="dock" hidden>
+    <div class="dock__info"><strong id="dockCount">0</strong> en tu cita · <span id="dockTotal">$0</span></div>
+    <a href="#cita" class="btn btn--small">Ver cita</a>
+  </div>
+
+  <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.88 9.88 0 0 0 12.04 2Zm5.8 14.03c-.24.68-1.42 1.31-1.96 1.360-.5.05-.97.23-3.27-.68-2.77-1.090-4.52-3.920-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.66-.17 1.33Z"/></svg>
+  </a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/esmaltes.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
