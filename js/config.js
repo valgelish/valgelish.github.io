@@ -9,16 +9,19 @@ window.VG_CONFIG = {
 
   instagram: "https://www.instagram.com/valgelish/",
 
-  // Hoja de Google donde se agregan / quitan esmaltes.
-  // Columnas: nombre | color (#hex) | familia | disponible (SI/NO) | foto (URL opcional)
+  // Hoja de Google desde donde la web lee servicios, precios y esmaltes.
+  // Pestaña "Servicios": servicio | precio | tipo (Servicio/Extra) | descripcion | activo (SI/NO)
+  // Pestaña "Esmaltes": codigo | marca | nombre | color (#hex) | familia | disponible (SI/NO) | foto (URL opcional)
   // La hoja debe estar compartida como "Cualquier persona con el enlace: Lector".
-  // Si se deja vacío, se usa la lista de respaldo de js/esmaltes.js
+  // Si la hoja no carga, se usan los respaldos de abajo y de js/esmaltes.js
   sheetId: "1iXwa-V-DW86jDEiyimf9gweb4UrLxUfBEjz4R9sV0ls",
   sheetName: "Esmaltes",
+  sheetServicios: "Servicios",
 
   // Máximo de colores que una clienta puede elegir
   maxColores: 3,
 
+  // Respaldo de servicios (solo si la hoja no carga)
   servicios: [
     { id: "gelish",   nombre: "Gelish liso",           precio: 150, tipo: "base",  desc: "Color sólido de larga duración, brillo espejo hasta por 3 semanas." },
     { id: "ojogato",  nombre: "Ojo de gato",           precio: 150, tipo: "base",  desc: "Efecto magnético con reflejo de luz que se mueve contigo." },
