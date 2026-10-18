@@ -11,12 +11,25 @@ Página estática (HTML/CSS/JS, sin frameworks). Se puede subir tal cual a Netli
 - `assets/ig/`: fotos tomadas de @valgelish
 - `assets/hero.mp4`: video del header (si no existe, se muestra un collage animado de fotos)
 
-## Agregar o quitar esmaltes
-Edita la hoja de Google **"Val Gelish · Esmaltes (catálogo web)"** (pestaña `Esmaltes`):
+## Servicios y precios
+Pestaña `Servicios` de la hoja de Google **"Val Gelish · Esmaltes (catálogo web)"**:
 
-| nombre | color | familia | disponible | foto |
+| servicio | precio | tipo | descripcion | activo |
 |---|---|---|---|---|
-| Vino tinto | #6E0F23 | Rojos | SI | (opcional: URL de una foto del esmalte) |
+| Gelish liso | 150 | Servicio | Color sólido de larga duración… | SI |
+
+- **Cambiar precio:** edita el número.
+- **Servicio nuevo:** agrega una fila. `tipo` = `Servicio` (va en la lista principal) o `Extra` (se suma aparte).
+- **Ocultarlo un tiempo:** `activo` = `NO`. **Quitarlo:** borra la fila.
+
+## Agregar o quitar esmaltes
+Pestaña `Esmaltes` de la misma hoja:
+
+| codigo | marca | nombre | color | familia | disponible | foto |
+|---|---|---|---|---|---|---|
+| E050 | Le Mussa | Rosa chicle suave | #E58C99 | Rosas | SI | (opcional) |
+
+La celda de `color` se pinta del tono para comparar con el esmalte real. Los códigos en amarillo están por confirmar. A Vale le llega por WhatsApp el nombre con marca y código.
 
 - **Agregar:** escribe una fila nueva.
 - **Se acabó:** cambia `disponible` a `NO`. Aparece tachado como "Agotado" y no se puede elegir.
