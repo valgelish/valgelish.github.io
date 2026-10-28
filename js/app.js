@@ -13,7 +13,6 @@
     filtro: "Todos",
     verTodos: false,
     horario: "",
-    largo: ""
   };
 
   /* ---------- Persistencia ligera (por navegador) ---------- */
@@ -22,7 +21,7 @@
     try {
       localStorage.setItem(STORE, JSON.stringify({
         servicios: [...state.servicios], colores: state.colores,
-        horario: state.horario, largo: state.largo,
+        horario: state.horario,
         nombre: $("#fNombre").value, fecha: $("#fFecha").value, notas: $("#fNotas").value
       }));
     } catch (e) {}
@@ -33,7 +32,7 @@
       if (!d) return;
       (d.servicios || []).forEach(id => state.servicios.add(id));
       state.colores = d.colores || [];
-      state.horario = d.horario || ""; state.largo = d.largo || "";
+      state.horario = d.horario || "";
       $("#fNombre").value = d.nombre || ""; $("#fFecha").value = d.fecha || ""; $("#fNotas").value = d.notas || "";
     } catch (e) {}
   }
@@ -47,7 +46,6 @@
   $("#igLink").href = CFG.instagram;
   $("#footIg").href = CFG.instagram;
   $("#year").textContent = new Date().getFullYear();
-  $("#maxColoresTxt").textContent = CFG.maxColores;
   const hoy = new Date(); hoy.setMinutes(hoy.getMinutes() - hoy.getTimezoneOffset());
   $("#fFecha").min = hoy.toISOString().slice(0, 10);
 
@@ -292,7 +290,6 @@
     const fecha = fechaBonita($("#fFecha").value);
     if (fecha) L.push(`*Día:* ${fecha}`);
     if (state.horario) L.push(`*Horario:* ${state.horario}`);
-    if (state.largo) L.push(`*Largo de uña:* ${state.largo}`);
     const notas = $("#fNotas").value.trim();
     if (notas) L.push(`*Notas:* ${notas}`);
     if (svcs.length) { L.push(""); L.push(`Total estimado: *${money(total)}*`); }
@@ -326,7 +323,6 @@
   /* ---------- Init ---------- */
   load();
   seg("#fHorario", "horario");
-  seg("#fLargo", "largo");
   update();
   cargarServicios().then(list => {
     state.svcList = list;

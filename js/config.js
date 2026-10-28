@@ -23,11 +23,11 @@ window.VG_CONFIG = {
 
   // Respaldo de servicios (solo si la hoja no carga)
   servicios: [
-    { id: "gelish",   nombre: "Gelish liso",           precio: 150, tipo: "base",  desc: "Color sólido de larga duración, brillo espejo hasta por 3 semanas." },
-    { id: "ojogato",  nombre: "Ojo de gato",           precio: 150, tipo: "base",  desc: "Efecto magnético con reflejo de luz que se mueve contigo." },
-    { id: "frances",  nombre: "Francés",               precio: 170, tipo: "base",  desc: "El clásico que nunca falla: base nude y punta perfecta." },
-    { id: "rubber",   nombre: "Base Rubber",           precio: 70,  tipo: "extra", desc: "Nivelación y refuerzo para uña natural más fuerte." },
-    { id: "glaseado", nombre: "Polvo efecto glaseado", precio: 50,  tipo: "extra", desc: "Acabado perlado tipo glazed donut." },
+    { id: "gelish",   nombre: "Gelish liso",           precio: 150, tipo: "base",  desc: "Color a tu elección con un acabado brillante y duradero." },
+    { id: "ojogato",  nombre: "Ojo de gato",           precio: 150, tipo: "base",  desc: "Un efecto brillante con reflejos que cambian según cómo les dé la luz." },
+    { id: "frances",  nombre: "Francés",               precio: 170, tipo: "base",  desc: "Uñas con base natural y puntas perfectas del color de tu preferencia, limpio y elegante." },
+    { id: "rubber",   nombre: "Base Rubber",           precio: 70,  tipo: "extra", desc: "Una base especial que ayuda a reforzar y dar mayor firmeza a tus uñas naturales." },
+    { id: "glaseado", nombre: "Polvo efecto glaseado", precio: 50,  tipo: "extra", desc: "Acabado efecto aperlado que hace que tus uñas luzcan como glaseadas." },
     { id: "retiro",   nombre: "Retiro de gelish",      precio: 50,  tipo: "extra", desc: "Retiro cuidadoso sin dañar tu uña natural." }
   ]
 };
